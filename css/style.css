@@ -6,6 +6,12 @@
 || TYPOGRAPHY
 || COLOR PALETTE
 
+|| TOP NAVIGATION BAR
+|| INFO CONTAINERS
+
+|| DARKMODE SWITCH
+|| DARKMODE CHANGES
+
 || MEDIA QUERIES
 
 ==============================================================================================
@@ -13,9 +19,10 @@
 =========================================================================================== */
 
 body {
+    transition: 0.3s;
+
     min-height: 100vh;
-    background: rgb(20,18,29);
-    background: linear-gradient(0deg, rgba(20,18,29,1) 0%, rgba(28,16,31,1) 100%);
+    background: #e3e0e6;
 }
 
 /* ===========================================================================================
@@ -24,16 +31,188 @@ body {
 
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-
+    font-size: 16px;
     color: #fff;
+}
+
+h1 {
+    transition: 0.3s;
+
+    background: -webkit-linear-gradient(180deg, #ff950a, #ff498f);;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 5rem;
 }
 
 /* ===========================================================================================
 || COLOR PALETTE
 =========================================================================================== */
 
+/* used in the background */
+.bg-raisin-black {
+    background: #14121D;
+}
+
+/* purplish-black for nav */
+.bg-black {
+    background: #14121d !important;
+}
+
+/* ===========================================================================================
+|| TOP NAVIGATION BAR
+=========================================================================================== */
+
+nav {
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    border: 2px solid #ff74a3;
+    border-radius: 20px;
+
+    background: #ff74a3;
+}
+
+.contact-btn:hover {
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    border: 2px solid #ff3276;
+    border-radius: 20px;
+
+    background: #ff3276;
+}
+
+.socials a {
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    border: 2px solid #fff;
+    margin: 0 4px;
+    background: #fff;
+    color: #ff74a3;
+}
+
+.socials a:hover {
+    background: #fff;
+
+    color: #ff3276;
+}
+
+/* ===========================================================================================
+|| INFO CONTAINERS
+=========================================================================================== */
+
+.info-container {
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    min-height: 200px;
+
+    background-color: #fff;
+}
+
+/* ===========================================================================================
+|| DARKMODE SWITCH
+=========================================================================================== */
+
+.darkmode-switch-container label {
+    position: relative;
+    display: block;
+
+    transition: 0.3s;
+
+    box-shadow: inset 0px 5px 15px rgba(255, 255, 255, 0.4), inset 0px -5px 15px rgba(0, 255, 255, 0.274);
+    border-radius: 25px;
+    width: 56px;
+    height: 29px;
+
+    background: #c5a6ff;
+
+    cursor: pointer;
+}
+
+.darkmode-switch-container label::after {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: 3px;
+
+    transition: 0.3s;
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    width: 26px;
+    height: 25px;
+
+    background: linear-gradient(180deg, #ffb75a, #ff498f);
+}
+
+.darkmode-switch-container input {
+    display: none;
+
+    width: 0;
+    height: 0;
+}
+
+.darkmode-switch-container input:checked + label {
+    background: #08034d;
+}
+
+.darkmode-switch-container input:checked + label::after {
+    left: 53px;
+    transform: translateX(-100%);
+
+    background: linear-gradient(180deg, #ff6b6b, #a41cff);
+}
+
+.darkmode-switch-container label:active:after {
+    width: 30px;
+}
+
+/* ===========================================================================================
+|| DARKMODE CHANGES
+=========================================================================================== */
+
+body.darkmode {
+    background: #18202e;
+}
+
+body.darkmode h1 {
+    transition: 0.3s;
+
+    background: -webkit-linear-gradient(180deg, #ff6b6b, #a41cff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 5rem;
+}
+
+body.darkmode .socials a {
+    border: 2px solid #fff;
+    margin: 0 4px;
+    background: transparent;
+    color: #fff;
+}
+
+body.darkmode .socials a:hover {
+    color: #a064ff;
+}
+
+body.darkmode a.contact-btn {
+    border: 2px solid #fff;
+
+    background: transparent;
+}
+
+body.darkmode .info-container {
+    border: 2px solid #151b27;
+
+    background-color: #2b3952;
+}
 
 /* ===========================================================================================
 || MEDIA QUERIES
