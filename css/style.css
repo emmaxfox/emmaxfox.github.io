@@ -34,13 +34,13 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: #fff;
+    color: #18202e;
 }
 
 h1 {
     transition: 0.3s;
 
-    background: -webkit-linear-gradient(180deg, #ff950a, #ff498f);;
+    background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -72,18 +72,21 @@ nav {
 
 .contact-btn {
     box-shadow: 0px 0px 5px rgb(255, 255, 255);
-    border: 2px solid #ff74a3;
+    border: 2px solid #d0beff;
     border-radius: 20px;
 
-    background: #ff74a3;
+    background: #b8a3f2;
+
+    font-weight: 300;
+    color: #000;
 }
 
 .contact-btn:hover {
     box-shadow: 0px 0px 5px rgb(255, 255, 255);
-    border: 2px solid #ff3276;
+    border: 2px solid #ff8e90;
     border-radius: 20px;
 
-    background: #ff3276;
+    background: #ff5f61;
 }
 
 .socials a {
@@ -91,13 +94,13 @@ nav {
     border: 2px solid #fff;
     margin: 0 4px;
     background: #fff;
-    color: #ff74a3;
+    color: #ff898b;
 }
 
 .socials a:hover {
     background: #fff;
 
-    color: #ff3276;
+    color: #ff5f61;
 }
 
 /* ===========================================================================================
@@ -105,13 +108,43 @@ nav {
 =========================================================================================== */
 
 .info-container {
-    margin-bottom: 20px;
+    position: relative;
+
+    margin-bottom: 10vh;
     border: 2px solid #fff;
     border-radius: 10px;
-    min-height: 200px;
+    min-height: 50vh;
 
     background-color: #fff;
 }
+
+.circle-photo {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 25vh;
+    height: 25vh;
+
+    background: url(./images/efox-photo.jpg);
+    background-size: cover;
+    background-position: 0 -25px;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.about-me {
+    margin-top: 20vh;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+
+    text-align: center;
+}
+
+/* ----- skill ticker ----- */
+
+
 
 /* ===========================================================================================
 || DARKMODE SWITCH
@@ -178,6 +211,8 @@ nav {
 
 body.darkmode {
     background: #18202e;
+
+    color: #fff;
 }
 
 body.darkmode h1 {
@@ -190,6 +225,8 @@ body.darkmode h1 {
 
     font-size: 5rem;
 }
+
+/* ----- top nav ----- */
 
 body.darkmode .socials a {
     border: 2px solid #fff;
@@ -206,7 +243,11 @@ body.darkmode a.contact-btn {
     border: 2px solid #fff;
 
     background: transparent;
+
+    color: #fff;
 }
+
+/* ----- info-containers ----- */
 
 body.darkmode .info-container {
     border: 2px solid #151b27;
