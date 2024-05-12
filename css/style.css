@@ -37,14 +37,17 @@ body {
     color: #18202e;
 }
 
-h1 {
+h1,
+h2 {
     transition: 0.3s;
 
     background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
 
+h1 {
     font-size: 5rem;
 }
 
@@ -110,10 +113,11 @@ nav {
 .info-container {
     position: relative;
 
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     border: 2px solid #fff;
     border-radius: 10px;
     min-height: 50vh;
+    padding: 20px;
 
     background-color: #fff;
 }
@@ -142,8 +146,25 @@ nav {
     text-align: center;
 }
 
-/* ----- skill ticker ----- */
+/* ----- projects ----- */
 
+.card {
+    max-height: 40vh;
+    overflow: hidden;
+
+    color: #fff;
+}
+
+.card img {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+
+    background-size: cover;
+}
+
+.card a {
+    color: #fff;
+}
 
 
 /* ===========================================================================================
@@ -215,15 +236,14 @@ body.darkmode {
     color: #fff;
 }
 
-body.darkmode h1 {
+body.darkmode h1,
+body.darkmode h2 {
     transition: 0.3s;
 
     background: -webkit-linear-gradient(180deg, #ff6b6b, #a41cff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    font-size: 5rem;
 }
 
 /* ----- top nav ----- */
