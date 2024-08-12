@@ -25,6 +25,14 @@ body {
     background: #e3e0e6;
 }
 
+.subtle {
+    color: #7d45ff;
+}
+
+body.darkmode .subtle {
+    color: #d1bdff;
+}
+
 /* ===========================================================================================
 || TYPOGRAPHY
 =========================================================================================== */
@@ -38,7 +46,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     transition: 0.3s;
 
     background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);;
@@ -49,6 +58,10 @@ h2 {
 
 h1 {
     font-size: 5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
 }
 
 /* ===========================================================================================
@@ -116,7 +129,7 @@ nav {
     margin-bottom: 5vh;
     border: 2px solid #fff;
     border-radius: 10px;
-    min-height: 50vh;
+    min-height: 30vh;
     padding: 20px;
 
     background-color: #fff;
@@ -149,7 +162,7 @@ nav {
 /* ----- projects ----- */
 
 .card {
-    max-height: 40vh;
+    max-height: 20vh;
     overflow: hidden;
 
     color: #fff;
@@ -237,7 +250,8 @@ body.darkmode {
 }
 
 body.darkmode h1,
-body.darkmode h2 {
+body.darkmode h2,
+body.darkmode h3 {
     transition: 0.3s;
 
     background: -webkit-linear-gradient(180deg, #ff6b6b, #a41cff);

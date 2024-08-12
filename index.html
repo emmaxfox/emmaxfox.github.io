@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
+    <title>Emma Fox's Web Portfolio</title>
     <!-- css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -24,12 +24,15 @@
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </head>
 
 <body>
     <header>
+        <!-- top bar -->
         <div class="container-fluid">
             <nav data-bs-theme="dark" class="navbar">
+                <!-- darkmode / lightmode switch -->
                 <div class="container-fluid text-center">
                     <div class="darkmode-switch-container">
                         <input id="darkmode-toggle" class="form-check-input" type="checkbox">
@@ -50,6 +53,7 @@
                             </svg>
                         </label>
                     </div>
+                    <!-- socials buttons -->
                     <div class="socials">
                         <a href="https://www.linkedin.com/in/emma-fox-6308861b4/" target="_blank" type="button"
                             class="btn">
@@ -67,24 +71,31 @@
                             </svg>
                         </a>
                     </div>
-                    <!-- make this a modal window later, that would be cool -->
-                    <a href="mailto: emmafox1300@gmail.org" type="button" class="btn contact-btn">email me</a>
+                    <!-- email -->
+                    <div>
+                        <a href="mailto: emmafox1300@gmail.org" type="button" class="btn contact-btn">Email</a>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <main>
+        <!-- page body -->
         <div class="container">
+            <!-- introduction -->
             <div class="about-me info-container row">
                 <div class="circle-photo"></div>
                 <h1>emma fox</h1>
-                <p>Hi, I'm Emma. I'm a '22 graduate of St. Bonaventure University. I write code wherever code goes.</p>
-                <p>Front-end &#10022; Back-end &#10022; Right-end &#10022; Left-end</p>
+                <p>I'm a <strong>Full-Stack Developer</strong> and 2022 graduate of St. Bonaventure University. I write code wherever code goes.</p>
+                <p class="subtle">Front-end &#10022; Back-end &#10022; Right-end &#10022; Left-end</p>
             </div>
+            <!-- personal projects -->
             <div class="info-container row">
-                <h2>check these out</h2>
-                <p class="subheading">Here are a few projects I've been working on.</p>
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div>
+                    <h2>Projects</h2>
+                    <p class="subheading">Here are a few projects I have worked on.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-2">
                     <div class="col">
                         <div class="card">
                             <a href="#">
@@ -93,7 +104,6 @@
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural
                                         lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
                                 </div>
                             </a>
                         </div>
@@ -106,7 +116,6 @@
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural
                                         lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
                                 </div>
                             </a>
                         </div>
@@ -119,7 +128,6 @@
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural
                                         lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
                                 </div>
                             </a>
                         </div>
@@ -132,49 +140,133 @@
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural
                                         lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="info-container row">
-                <h2>bragging rights</h2>
-                <p class="subheading">Take a look at some of my skills.</p>
-            </div>
-            <div class="info-container row">
-                <h2>dogs i know</h2>
-                <p class="subheading">They keep me company while I code.</p>
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="...">
+            <!-- skills -->
+            <div class="row">
+                <div class="info-container col">
+                    <div>
+                        <h2>Skills</h2>
+                        <p class="subheading">A bit of what I know so far.</p>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-2">
+                        <div class="col">
+                            <h3>Hard skills</h3>
+                            <div>
+                                <ul>
+                                    <li>Agile Development</li>
+                                    <li>Git, Github</li>
+                                    <li>HTML / CSS / JavaScript</li>
+                                    <li>Java</li>
+                                    <li>Laravel</li>
+                                    <li>PHP</li>
+                                    <li>Python</li>
+                                    <li>Responsive web design</li>
+                                    <li>SQL, MySQL</li>
+                                    <li>WordPress</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
+                        <div class="col">
+                            <h3>Soft skills</h3>
+                            <div>
+                                <ul>
+                                    <li>Problem solving</li>
+                                    <li>Time management</li>
+                                    <li>Attention to detail</li>
+                                    <li>Communication</li>
+                                    <li>Adaptability</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                </div>
+                <div class="info-container col">
+                    <div>
+                        <h2>Skills</h2>
+                        <p class="subheading">A bit of what I know so far.</p>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-2">
+                        <div class="col">
+                            <h3>Hard skills</h3>
+                            <div>
+                                <ul>
+                                    <li>Agile Development</li>
+                                    <li>Git, Github</li>
+                                    <li>HTML / CSS / JavaScript</li>
+                                    <li>Java</li>
+                                    <li>Laravel</li>
+                                    <li>PHP</li>
+                                    <li>Python</li>
+                                    <li>Responsive web design</li>
+                                    <li>SQL, MySQL</li>
+                                    <li>WordPress</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h3>Soft skills</h3>
+                            <div>
+                                <ul>
+                                    <li>Problem solving</li>
+                                    <li>Time management</li>
+                                    <li>Attention to detail</li>
+                                    <li>Communication</li>
+                                    <li>Adaptability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- dogs :) -->
+            <div class="info-container row">
+                <div>
+                    <h2>Assistants</h2>
+                    <p class="subheading">They keep me company while I code.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-2">
+                    <div class="col">
+                        <div class="card">
+                            <a href="#">
+                                <img src="./css/images/artist.jpg" class="card-img" alt="Finn the dog">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Finn</h5>
+                                    <p class="card-text"><strong>Personal</strong>. Happily sat through two semesters worth of online comp-sci classes during the COVID-19 pandemic.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <a href="#">
+                                <img src="./css/images/car.jpg" class="card-img" alt="Jake the dog">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Jake</h5>
+                                    <p class="card-text"><strong>Experimental</strong>. Once added several lines of code to a PHP file along the lines of "dsbh8730198hqwaoiejdq-yefarg"...</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <a href="#">
+                                <img src="./css/images/food.jpg" class="card-img" alt="Snoopy the dog">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Snoopy</h5>
+                                    <p class="card-text"><strong>Timely</strong>. Encourages quick and efficient problem solving so he can go on walks faster.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>
