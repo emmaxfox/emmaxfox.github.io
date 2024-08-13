@@ -9,6 +9,8 @@
 || TOP NAVIGATION BAR
 || INFO CONTAINERS
 
+|| SKILLS
+
 || DARKMODE SWITCH
 || DARKMODE CHANGES
 
@@ -26,7 +28,7 @@ body {
 }
 
 .subtle {
-    color: #7d45ff;
+    color: #9e75ff;
 }
 
 body.darkmode .subtle {
@@ -42,27 +44,34 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: #18202e;
+    color: #1f293a;
 }
 
-h1,
-h2,
-h3 {
+h1 {
     transition: 0.3s;
 
-    background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);;
+    background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 5rem;
+}
+
+h2 {
+    transition: 0.3s;
+
+    background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-h1 {
-    font-size: 5rem;
-}
-
 h3 {
     font-size: 1.2rem;
+    color: #1f293a;
 }
+
 
 /* ===========================================================================================
 || COLOR PALETTE
@@ -249,36 +258,42 @@ body.darkmode {
     color: #fff;
 }
 
-body.darkmode h1,
-body.darkmode h2,
-body.darkmode h3 {
+body.darkmode h1 {
     transition: 0.3s;
 
-    background: -webkit-linear-gradient(180deg, #ff6b6b, #a41cff);
+    background: -webkit-linear-gradient(180deg, #ff6b6b, #a200ff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+body.darkmode h2 {
+    transition: 0.3s;
+
+    background: -webkit-linear-gradient(180deg, #ff6b6b, #cf9bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.darkmode h3 {
+    color: #fff;
+}
+
 /* ----- top nav ----- */
 
-body.darkmode .socials a {
+body.darkmode .socials a,
+body.darkmode a.contact-btn {
     border: 2px solid #fff;
     margin: 0 4px;
     background: transparent;
     color: #fff;
 }
 
-body.darkmode .socials a:hover {
-    color: #a064ff;
-}
-
-body.darkmode a.contact-btn {
-    border: 2px solid #fff;
-
-    background: transparent;
-
-    color: #fff;
+body.darkmode .socials a:hover,
+body.darkmode a.contact-btn:hover {
+    border: 2px solid #d748ac;
+    color: #d748ac;
 }
 
 /* ----- info-containers ----- */
