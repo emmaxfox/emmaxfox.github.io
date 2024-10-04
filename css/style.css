@@ -126,7 +126,7 @@ h1 {
 }
 
 .tiny-print {
-    font-size: calc(10px + 3vw);
+    font-size: calc(8px + 3vw);
 }
 
 /* --------------------------------------------------------------------------
@@ -231,7 +231,7 @@ h1 {
     section {
         padding: 100px 20vw;
     }
-    
+
     .welcome {
         text-align: center;
     }
