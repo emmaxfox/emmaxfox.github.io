@@ -1,309 +1,160 @@
-/* ===========================================================================================
-                                        CSS INDEX
-==============================================================================================
+/* -------------------------------------------------------------------------
+                                INDEX
+----------------------------------------------------------------------------
 
-|| GENERAL
-|| TYPOGRAPHY
-|| COLOR PALETTE
 
-|| TOP NAVIGATION BAR
-|| INFO CONTAINERS
+|| DEFAULTS
 
-|| SKILLS
+|| WELCOME
 
-|| DARKMODE SWITCH
-|| DARKMODE CHANGES
+|| COLORS
+|| CURVES
 
-|| MEDIA QUERIES
 
-==============================================================================================
-|| GENERAL
-=========================================================================================== */
+----------------------------------------------------------------------------
+|| DEFAULTS
+--------------------------------------------------------------------------*/
 
 body {
-    transition: 0.3s;
+    margin: 0;
+    padding: 0;
 
-    min-height: 100vh;
-    background: #e3e0e6;
-}
+    background: #202731;
 
-.subtle {
-    color: #9e75ff;
-}
-
-body.darkmode .subtle {
-    color: #d1bdff;
-}
-
-/* ===========================================================================================
-|| TYPOGRAPHY
-=========================================================================================== */
-
-body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Afacad Flux', sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    color: #1f293a;
+    font-variation-settings:
+    "slnt" 0;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+p, a {
+    font-size: 20px;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+/* --------------------------------------------------------------------------
+|| NAVBAR
+--------------------------------------------------------------------------*/
+
+.site-navigation-container {
+    display: flex;
+    justify-content: center;
+}
+
+nav.site-links {
+    z-index: 1;
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+
+    border-bottom: 1px solid #ffffff86;
+}
+
+nav.site-links a {
+    padding: 0 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+|| WELCOME
+--------------------------------------------------------------------------*/
+
+.welcome {
+    box-shadow: inset -2000px -2000px #24150dab;
+    height: 55vh;
+
+    background-image: url("./images/coffee-shop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome-box {
+    margin-top: 
 }
 
 h1 {
-    transition: 0.3s;
-
-    background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    font-size: 5rem;
+    font-family: "Noto Serif", sans-serif;
+    font-size: 6rem;
 }
 
-h2 {
-    transition: 0.3s;
-
-    background: -webkit-linear-gradient(180deg, #ff7b00, #9860ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.tiny-print {
+    font-size: 2rem;
 }
 
-h3 {
-    font-size: 1.2rem;
-    color: #1f293a;
+/* --------------------------------------------------------------------------
+|| BUTTONS
+--------------------------------------------------------------------------*/
+
+.primary-btn {
+    
 }
 
-
-/* ===========================================================================================
-|| COLOR PALETTE
-=========================================================================================== */
-
-/* used in the background */
-.bg-raisin-black {
-    background: #14121D;
+/* --------------------------------------------------------------------------
+|| COLORS
+--------------------------------------------------------------------------*/
+.falu-red {
+    background-color: #6F1D1B;
 }
 
-/* purplish-black for nav */
-.bg-black {
-    background: #14121d !important;
+.lion {
+    background-color: #BB9457;
 }
 
-/* ===========================================================================================
-|| TOP NAVIGATION BAR
-=========================================================================================== */
-
-nav {
-    margin-bottom: 20px;
+.bistre {
+    background-color: #432818;
 }
 
-.contact-btn {
-    box-shadow: 0px 0px 5px rgb(255, 255, 255);
-    border: 2px solid #d0beff;
-    border-radius: 20px;
-
-    background: #b8a3f2;
-
-    font-weight: 300;
-    color: #000;
+.brown {
+    background-color: #99582A;
 }
 
-.contact-btn:hover {
-    box-shadow: 0px 0px 5px rgb(255, 255, 255);
-    border: 2px solid #ff8e90;
-    border-radius: 20px;
-
-    background: #ff5f61;
+.peach {
+    background-color: #FFE6A7;
 }
 
-.socials a {
-    box-shadow: 0px 0px 5px rgb(255, 255, 255);
-    border: 2px solid #fff;
-    margin: 0 4px;
-    background: #fff;
-    color: #ff898b;
-}
-
-.socials a:hover {
-    background: #fff;
-
-    color: #ff5f61;
-}
-
-/* ===========================================================================================
-|| INFO CONTAINERS
-=========================================================================================== */
-
-.info-container {
-    position: relative;
-
-    margin-bottom: 5vh;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    min-height: 30vh;
-    padding: 20px;
-
-    background-color: #fff;
-}
-
-.circle-photo {
+/* --------------------------------------------------------------------------
+|| CURVES
+--------------------------------------------------------------------------*/
+.custom-shape-divider-bottom-1728054470 {
     position: absolute;
-    top: 0px;
-    left: 50%;
-
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 25vh;
-    height: 25vh;
-
-    background: url(./images/efox-photo.jpg);
-    background-size: cover;
-    background-position: 0 -25px;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-.about-me {
-    margin-top: 20vh;
-    padding-top: 12vh;
-    padding-bottom: 12vh;
-
-    text-align: center;
-}
-
-/* ----- projects ----- */
-
-.card {
-    max-height: 20vh;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     overflow: hidden;
-
-    color: #fff;
+    line-height: 0;
+    transform: rotate(180deg);
 }
 
-.card img {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-
-    background-size: cover;
-}
-
-.card a {
-    color: #fff;
-}
-
-
-/* ===========================================================================================
-|| DARKMODE SWITCH
-=========================================================================================== */
-
-.darkmode-switch-container label {
+.custom-shape-divider-bottom-1728054470 svg {
     position: relative;
     display: block;
-
-    transition: 0.3s;
-
-    box-shadow: inset 0px 5px 15px rgba(255, 255, 255, 0.4), inset 0px -5px 15px rgba(0, 255, 255, 0.274);
-    border-radius: 25px;
-    width: 56px;
-    height: 29px;
-
-    background: #c5a6ff;
-
-    cursor: pointer;
+    width: calc(159% + 1.3px);
+    height: 117px;
 }
 
-.darkmode-switch-container label::after {
-    content: "";
-
-    position: absolute;
-    top: 2px;
-    left: 3px;
-
-    transition: 0.3s;
-
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    width: 26px;
-    height: 25px;
-
-    background: linear-gradient(180deg, #ffb75a, #ff498f);
+.custom-shape-divider-bottom-1728054470 .shape-fill {
+    fill: #6F1D1B;
 }
-
-.darkmode-switch-container input {
-    display: none;
-
-    width: 0;
-    height: 0;
-}
-
-.darkmode-switch-container input:checked + label {
-    background: #08034d;
-}
-
-.darkmode-switch-container input:checked + label::after {
-    left: 53px;
-    transform: translateX(-100%);
-
-    background: linear-gradient(180deg, #ff6b6b, #a41cff);
-}
-
-.darkmode-switch-container label:active:after {
-    width: 30px;
-}
-
-/* ===========================================================================================
-|| DARKMODE CHANGES
-=========================================================================================== */
-
-body.darkmode {
-    background: #18202e;
-
-    color: #fff;
-}
-
-body.darkmode h1 {
-    transition: 0.3s;
-
-    background: -webkit-linear-gradient(180deg, #ff6b6b, #a200ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-body.darkmode h2 {
-    transition: 0.3s;
-
-    background: -webkit-linear-gradient(180deg, #ff6b6b, #cf9bff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-body.darkmode h3 {
-    color: #fff;
-}
-
-/* ----- top nav ----- */
-
-body.darkmode .socials a,
-body.darkmode a.contact-btn {
-    border: 2px solid #fff;
-    margin: 0 4px;
-    background: transparent;
-    color: #fff;
-}
-
-body.darkmode .socials a:hover,
-body.darkmode a.contact-btn:hover {
-    border: 2px solid #d748ac;
-    color: #d748ac;
-}
-
-/* ----- info-containers ----- */
-
-body.darkmode .info-container {
-    border: 2px solid #151b27;
-
-    background-color: #2b3952;
-}
-
-/* ===========================================================================================
-|| MEDIA QUERIES
-=========================================================================================== */
