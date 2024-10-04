@@ -5,8 +5,10 @@
 
 || DEFAULTS
 
+|| NAVBAR
 || WELCOME
 
+|| BUTTONS
 || COLORS
 || CURVES
 
@@ -46,7 +48,7 @@ section {
     flex-direction: column;
     align-items: center;
     min-height: 400px;
-    padding: 100px 20vw;
+    padding: 100px 10vw;
 }
 
 /* --------------------------------------------------------------------------
@@ -78,38 +80,104 @@ nav.site-links a {
     color: #fff;
 }
 
+.site-logo {
+    font-family: "Noto Serif", sans-serif;
+    font-weight: bold;
+}
+
 /* --------------------------------------------------------------------------
 || WELCOME
 --------------------------------------------------------------------------*/
 
 .welcome {
     box-shadow: inset -2000px -2000px #24150dab;
-    height: 55vh;
+    min-height: 55vh;
 
     background-image: url("./images/coffee-shop.jpg");
     background-size: cover;
     background-position: center;
+
+    text-align: left;
 }
 
 .welcome-box {
-    margin-top: 
+    display: inline-flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-top: 67px;
+    height: 100%;
+    min-width: 50vw;
+}
+
+.established {
+    /* margin: 10px auto 10px auto; */
+    color: #cacaca;
+}
+
+.welcome-message {
+    text-align: left;
 }
 
 h1 {
     font-family: "Noto Serif", sans-serif;
-    font-size: 6rem;
+    font-size: calc(32px + 4vw);
 }
 
 .tiny-print {
-    font-size: 2rem;
+    font-size: calc(10px + 3vw);
 }
 
 /* --------------------------------------------------------------------------
 || BUTTONS
 --------------------------------------------------------------------------*/
 
-.primary-btn {
-    
+.view-menu {
+    display: inline-flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 30px 0;
+
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+
+    background-color: #1a0f09;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.view-menu:hover {
+    transition: 0.2s;
+
+    border: none;
+
+    background-color: #693f27;
+}
+
+/* return to top button */
+
+#return-to-top {
+    z-index: 2;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 2px 5px #00000038;
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+    background-color: #00000050;
+
+    color: #fff;
+    text-decoration: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -157,4 +225,18 @@ h1 {
 
 .custom-shape-divider-bottom-1728054470 .shape-fill {
     fill: #6F1D1B;
+}
+
+@media screen and (min-width: 700px) {
+    section {
+        padding: 100px 20vw;
+    }
+    
+    .welcome {
+        text-align: center;
+    }
+
+    .welcome-box {
+        align-items: center;
+    }
 }
