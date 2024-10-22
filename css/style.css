@@ -144,7 +144,7 @@ h1 {
     padding: 10px 40px;
 
     background-color: #1a0f09;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #fff;
 }
 
@@ -154,6 +154,13 @@ h1 {
     border: none;
 
     background-color: #693f27;
+}
+
+.view-menu,
+.view-menu:hover,
+.view-menu:active,
+.view-menu:visited {
+    text-decoration: none;
 }
 
 /* return to top button */
