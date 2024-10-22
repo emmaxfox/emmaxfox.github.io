@@ -1,0 +1,81 @@
+/* ---------------------------------------------------------------------
+                                INDEX
+------------------------------------------------------------------------
+
+    || CSS RESET
+    || TYPOGRAPHY
+
+    || SPOTLIGHT
+
+------------------------------------------------------------------------
+|| CSS RESET
+--------------------------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #0a0316;
+}
+
+main {
+    padding: 5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+
+    font-family: Helvetica, sans-serif;
+    color: #e9e9e9;
+}
+
+/* ---------------------------------------------------------------------
+|| TYPOGRAPHY
+--------------------------------------------------------------------- */
+
+p {
+    color: #636363;
+}
+
+/* ---------------------------------------------------------------------
+|| SPOTLIGHT
+--------------------------------------------------------------------- */
+
+.spotlight-container {
+    height: 80vh;
+    width: 100%;
+
+}
+
+.signature {
+    font-family: "Ballet", cursive;
+    color: #32023b;
+}
+
+.signature h1 {
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+.signature p {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.spotlight {
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+}
