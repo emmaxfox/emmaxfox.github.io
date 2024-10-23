@@ -5,7 +5,12 @@
     || CSS RESET
     || TYPOGRAPHY
 
+    || NAVIGATION
     || SPOTLIGHT
+    || PROJECTS
+    || RESUME
+
+    || MEDIA QUERIES
 
 ------------------------------------------------------------------------
 || CSS RESET
@@ -27,7 +32,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
     margin: 0;
     padding: 0;
 
@@ -39,8 +45,59 @@ p {
 || TYPOGRAPHY
 --------------------------------------------------------------------- */
 
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
 p {
-    color: #636363;
+    color: #797979;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a,
+a:visited {
+    color: #979797;
+}
+
+a:hover {
+    color: #ebebeb;
+}
+
+a:active {
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------
+|| NAVIGATION
+--------------------------------------------------------------------- */
+
+nav.floating-side-navigation {
+    position: fixed;
+    top: 40vh;
+    right: 5vw;
+
+    display: inline-flex;
+    flex-flow: column;
+    gap: 30px;
+
+    border-right: 1px solid #979797;
+    padding: 10px 20px;
+
+    background-color: #00000009;
+}
+
+.floating-side-navigation a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: right;
 }
 
 /* ---------------------------------------------------------------------
@@ -51,11 +108,6 @@ p {
     height: 80vh;
     width: 100%;
 
-}
-
-.signature {
-    font-family: "Ballet", cursive;
-    color: #32023b;
 }
 
 .signature h1 {
@@ -79,3 +131,70 @@ p {
 
     text-align: center;
 }
+
+/* ---------------------------------------------------------------------
+|| PROJECTS
+--------------------------------------------------------------------- */
+
+.projects-container {
+    display: inline-flex;
+    flex-flow: column;
+    gap: 250px;
+    padding: 15% 25%;
+}
+
+.project {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+
+
+.project-image-container img {
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+
+    background-color: #ffffff75;
+}
+
+.project-description {
+    flex: 2;
+
+    line-height: 1.5;
+}
+
+.project-description p {
+    margin-bottom: 20px;
+}
+
+.project-links a {
+    margin-right: 10px;
+}
+
+/* ---------------------------------------------------------------------
+|| RESUME
+--------------------------------------------------------------------- */
+
+.resume-container {
+    display: inline-flex;
+    flex-flow: column;
+    gap: 250px;
+    padding: 15% 25%;
+}
+
+.resume {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+
+/* ---------------------------------------------------------------------
+|| MEDIA QUERIES
+--------------------------------------------------------------------- */
