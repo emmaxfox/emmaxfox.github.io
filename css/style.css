@@ -6,15 +6,21 @@
     || TYPOGRAPHY
 
     || NAVIGATION
+
     || SPOTLIGHT
     || PROJECTS
     || RESUME
+    || CONTACT
 
     || MEDIA QUERIES
 
 ------------------------------------------------------------------------
 || CSS RESET
 --------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -48,6 +54,7 @@ a {
 h2 {
     margin-bottom: 20px;
     font-size: 2rem;
+    font-weight: 300;
 }
 
 p {
@@ -149,8 +156,6 @@ nav.floating-side-navigation {
     gap: 5%;
 }
 
-
-
 .project-image-container img {
     border-radius: 5px;
     width: 400px;
@@ -184,8 +189,7 @@ nav.floating-side-navigation {
 .resume-container {
     display: inline-flex;
     flex-flow: column;
-    gap: 250px;
-    padding: 15% 25%;
+    padding: 5% 25%;
 }
 
 .resume {
@@ -194,6 +198,131 @@ nav.floating-side-navigation {
     gap: 5%;
 }
 
+.resume-skills {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+
+    width: 100%;
+}
+
+.resume-description {
+    flex: 2;
+
+    border-left: 1px solid #fff;
+    padding-left: 50px;
+
+    line-height: 1.5
+}
+
+.resume-paragraph {
+    margin-bottom: 40px;
+}
+
+.resume-paragraph p {
+    margin-bottom: 20px;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    border-radius: 5px;
+    padding: 2px 5px;
+
+    text-align: center;
+}
+
+p.skill {
+    margin: 0;
+
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.language-skill {
+    border: 1px solid #9600FF;
+    background-color: #9600bf56;
+}
+
+.framework-skill {
+    border: 1px solid #00FFF9;
+    background-color: #00FFbf56;
+}
+
+.soft-skill {
+    border: 1px solid #FF00C1;
+    background-color: #ff00bf56;
+}
+
+a.outlined-button {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 10px;
+
+    background-color: #c9c9c9;
+    color: #000;
+}
+
+a.outlined-button:hover {
+    background-color: #ffffff;
+}
+
+/* ---------------------------------------------------------------------
+|| CONTACT
+--------------------------------------------------------------------- */
+
+.contact-container {
+    display: inline-flex;
+    flex-flow: column;
+    gap: 250px;
+    padding: 15% 25%;
+}
+
+.contact {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.contact-image-container img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+
+    background-color: #ffffff75;
+}
+
+.contact-description {
+    flex: 2;
+
+    line-height: 1.5;
+}
+
+.contact-description p {
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    margin-right: 10px;
+}
+
+.primary-contact-method {
+    color: #d7a7ff;
+}
+
+.primary-contact-method:hover {
+    color: #e7c9ff;
+}
 
 /* ---------------------------------------------------------------------
 || MEDIA QUERIES
