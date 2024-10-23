@@ -281,7 +281,7 @@ a.outlined-button:hover {
     display: inline-flex;
     flex-flow: column;
     gap: 250px;
-    padding: 15% 25%;
+    padding: 15% 25% 5% 25%;
 }
 
 .contact {
