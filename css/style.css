@@ -163,7 +163,7 @@ nav.floating-navigation-desktop {
 section.projects-container {
     display: inline-flex;
     flex-flow: column;
-    gap: 150px;
+    gap: 100px;
     padding: 15% 2%;
 }
 
@@ -314,7 +314,6 @@ a.outlined-button:hover {
 section.contact-container {
     display: inline-flex;
     flex-flow: column;
-    gap: 250px;
     padding: 15% 2%;
 }
 
@@ -341,7 +340,8 @@ section.contact-container {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    flex: 2;
+    align-content: center;
+    flex: 1;
 
     min-width: 300px;
 
@@ -383,16 +383,16 @@ section.contact-container {
 
     /* projects */
     section.projects-container {
-        padding: 15% 25%;
+        padding: 10% 25%;
     }
 
     /* resume */
     section.resume-container {
-        padding: 5% 15%;
+        padding: 1% 15%;
     }
 
     /* contact */
     section.contact-container {
-        padding: 15% 25% 5%;
+        padding: 10% 15%;
     }
 }
