@@ -2,7 +2,7 @@
                                 INDEX
 ------------------------------------------------------------------------
 
-    || CSS RESET
+    || DEFAULTS
     || TYPOGRAPHY
 
     || NAVIGATION
@@ -15,7 +15,7 @@
     || MEDIA QUERIES
 
 ------------------------------------------------------------------------
-|| CSS RESET
+|| DEFAULTS
 --------------------------------------------------------------------- */
 html {
     scroll-behavior: smooth;
@@ -26,10 +26,6 @@ body {
     padding: 0;
 
     background-color: #0a0316;
-}
-
-main {
-    padding: 5%;
 }
 
 h1,
@@ -86,12 +82,32 @@ a:active {
 || NAVIGATION
 --------------------------------------------------------------------- */
 
-nav.floating-side-navigation {
+/* mobile version */
+nav.floating-navigation-mobile {
     position: fixed;
-    top: 40vh;
-    right: 5vw;
+    top: 0px;
 
     display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-bottom: 1px solid #979797;
+    width: 100%;
+    padding: 15px;
+
+    background-color: #000000c4;
+
+    font-size: 0.8rem;
+}
+
+/* desktop version */
+nav.floating-navigation-desktop {
+    position: fixed;
+    top: 40vh;
+    right: 30px;
+
+    display: none;
     flex-flow: column;
     gap: 30px;
 
@@ -101,7 +117,7 @@ nav.floating-side-navigation {
     background-color: #00000009;
 }
 
-.floating-side-navigation a {
+.floating-navigation-mobile a {
     font-size: 0.9rem;
     font-weight: 400;
     text-align: right;
@@ -112,19 +128,20 @@ nav.floating-side-navigation {
 --------------------------------------------------------------------- */
 
 .spotlight-container {
+    margin-top: 50px;
     height: 80vh;
-    width: 100%;
-
 }
 
 .signature h1 {
     font-weight: 300;
-    font-size: 5rem;
+    font-size: calc(4vw + 3rem);
+    /* font-size: 5rem; */
 }
 
 .signature p {
     font-weight: 300;
-    font-size: 2rem;
+    font-size: calc(1vw + 1rem);
+    /* font-size: 2rem; */
 }
 
 .spotlight {
@@ -143,7 +160,7 @@ nav.floating-side-navigation {
 || PROJECTS
 --------------------------------------------------------------------- */
 
-.projects-container {
+section.projects-container {
     display: inline-flex;
     flex-flow: column;
     gap: 250px;
@@ -186,10 +203,10 @@ nav.floating-side-navigation {
 || RESUME
 --------------------------------------------------------------------- */
 
-.resume-container {
+section.resume-container {
     display: inline-flex;
     flex-flow: column;
-    padding: 5% 25%;
+    padding: 5% 15%;
 }
 
 .resume {
@@ -277,11 +294,11 @@ a.outlined-button:hover {
 || CONTACT
 --------------------------------------------------------------------- */
 
-.contact-container {
+section.contact-container {
     display: inline-flex;
     flex-flow: column;
     gap: 250px;
-    padding: 15% 25% 5% 25%;
+    padding: 15% 25% 5%;
 }
 
 .contact {
@@ -327,3 +344,17 @@ a.outlined-button:hover {
 /* ---------------------------------------------------------------------
 || MEDIA QUERIES
 --------------------------------------------------------------------- */
+
+@media (width >= 1024px) {
+    /* defaults */
+
+
+    /* navigation */
+    nav.floating-navigation-mobile {
+        display: none;
+    }
+
+    nav.floating-navigation-desktop {
+        display: flex;
+    }
+}
