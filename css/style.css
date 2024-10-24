@@ -93,7 +93,7 @@ nav.floating-navigation-mobile {
     gap: 15px;
 
     border-bottom: 1px solid #979797;
-    width: 100%;
+    width: calc(100% - 30px);
     padding: 15px;
 
     background-color: #000000c4;
@@ -114,7 +114,7 @@ nav.floating-navigation-desktop {
     border-right: 1px solid #979797;
     padding: 10px 20px;
 
-    background-color: #00000009;
+    background-color: #0a0316;
 }
 
 .floating-navigation-mobile a {
@@ -128,8 +128,8 @@ nav.floating-navigation-desktop {
 --------------------------------------------------------------------- */
 
 .spotlight-container {
-    margin-top: 50px;
-    height: 80vh;
+    margin: 30px;
+    height: 90vh;
 }
 
 .signature h1 {
@@ -163,8 +163,8 @@ nav.floating-navigation-desktop {
 section.projects-container {
     display: inline-flex;
     flex-flow: column;
-    gap: 250px;
-    padding: 15% 25%;
+    gap: 150px;
+    padding: 15% 2%;
 }
 
 .project {
@@ -173,10 +173,22 @@ section.projects-container {
     gap: 5%;
 }
 
+.project.image-left {
+    flex-flow: row wrap;
+}
+
+.project.image-right {
+    flex-flow: row wrap-reverse;
+}
+
+.project-image-container {
+    margin: 0 auto 40px auto;
+}
+
 .project-image-container img {
     border-radius: 5px;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
 
     object-fit: cover;
     object-position: center;
@@ -187,6 +199,8 @@ section.projects-container {
 
 .project-description {
     flex: 2;
+
+    min-width: 300px;
 
     line-height: 1.5;
 }
@@ -206,11 +220,12 @@ section.projects-container {
 section.resume-container {
     display: inline-flex;
     flex-flow: column;
-    padding: 5% 15%;
+    padding: 15% 5%;
 }
 
 .resume {
     display: inline-flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     gap: 5%;
 }
@@ -223,12 +238,14 @@ section.resume-container {
     flex-flow: column;
 
     width: 100%;
+    min-width: 250px;
 }
 
 .resume-description {
     flex: 2;
 
     border-left: 1px solid #fff;
+    min-width: 200px;
     padding-left: 50px;
 
     line-height: 1.5
@@ -298,19 +315,20 @@ section.contact-container {
     display: inline-flex;
     flex-flow: column;
     gap: 250px;
-    padding: 15% 25% 5%;
+    padding: 15% 2%;
 }
 
 .contact {
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-flow: row wrap;
     gap: 5%;
 }
 
 .contact-image-container img {
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
 
     object-fit: cover;
     object-position: center;
@@ -320,7 +338,12 @@ section.contact-container {
 }
 
 .contact-description {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     flex: 2;
+
+    min-width: 300px;
 
     line-height: 1.5;
 }
@@ -356,5 +379,20 @@ section.contact-container {
 
     nav.floating-navigation-desktop {
         display: flex;
+    }
+
+    /* projects */
+    section.projects-container {
+        padding: 15% 25%;
+    }
+
+    /* resume */
+    section.resume-container {
+        padding: 5% 15%;
+    }
+
+    /* contact */
+    section.contact-container {
+        padding: 15% 25% 5%;
     }
 }
