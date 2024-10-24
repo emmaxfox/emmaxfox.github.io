@@ -164,7 +164,7 @@ section.projects-container {
     display: inline-flex;
     flex-flow: column;
     gap: 100px;
-    padding: 15% 2%;
+    padding: 25% 2%;
 }
 
 .project {
@@ -182,7 +182,7 @@ section.projects-container {
 }
 
 .project-image-container {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
 }
 
 .project-image-container img {
